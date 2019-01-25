@@ -20,10 +20,10 @@ end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
 "SELECT users.name, SUM(pledges.amount) AS all_pledges FROM users INNER JOIN pledges ON users.id = pledges.user_id GROUP BY users.name ORDER BY all_pledges ASC"
-end
+endpledges.amount
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
-"Write your SQL query Here"
+"SELECT projects.category, pledges.amounts FROM projects INNER JOIN pledges ON projects.id = pledges.project_id WHERE projects.category = 'music' GROUP BY projects.category"
 end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
